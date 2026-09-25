@@ -1,4 +1,6 @@
-# Cole exatamente do jeito que está abaixo aue a taabela surgirá: 
+# COPIE E COLE A PLANILHA EM FORMATO DE CÓDIGO AQUI DO GITHUB E COLE NO FORMATO TEXTO NO GOOGLE COLAB, POIS SE VOCÊ TRADUZIR A PÁGINA PARA O PORTUGUÊS, ELE VAI TROCAR O PONTO PELA VÍRGULA E TODOS DARÃO O MESMO ERRO, VEJA SE O BLOCO ESTÁ NO FORMATO DE TEXTO NO GOOGLE COLAB.
+
+# 📌 1: O "Divisor de Conta" Simples (Sem Garçom)
 
 | ID | Cenário / Objetivo | Prompt / Entrada do Usuário | Resultado que o Aluno Deve Preencher |
 | :--- | :--- | :--- | :--- |
