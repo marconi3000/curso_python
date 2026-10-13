@@ -1,5 +1,6 @@
 # COPIE E COLE A PLANILHA EM FORMATO DE CÓDIGO AQUI DO GITHUB E COLE NO FORMATO TEXTO NO GOOGLE COLAB, POIS SE VOCÊ TRADUZIR A PÁGINA PARA O PORTUGUÊS, ELE VAI TROCAR O PONTO PELA VÍRGULA E TODOS DARÃO O MESMO ERRO, VEJA SE O BLOCO ESTÁ NO FORMATO DE TEXTO NO GOOGLE COLAB.
 
+
 # 📌 1: O "DIVISOR DE CONTA" SIMPLES (Sem garçom)
 
 | ID | Cenário / Objetivo | Prompt / Entrada do Usuário | Resultado que o Aluno Deve Preencher |
@@ -31,6 +32,8 @@ print(f"Cada pessoa vai pagar: R$ {valor_por_pessoa:.2f}")
 # formatação .2f. - Limita a exibição de um número decimal para apenas duas casas após a vírgula
 # divisão /; - Dividir dois valores gerando sempre um resultado decimal (float)
 ```
+
+
 # 📌 2: CONVERSOR DE MOEDAS - Dólar para Real
 
 | ID | 1º Prompt | 2º Prompt | Resultado que o Aluno Deve Preencher |
@@ -59,4 +62,38 @@ print(f"Você terá o equivalente a: R$ {reais:.2f}")
 # print() - Exibe textos, variáveis e resultados na tela do computador
 # f-string - Interpola e encaixa variáveis diretamente dentro de um texto de forma simples
 # formatação .2f - Limita a exibição de um número decimal para apenas duas casas após a vírgula
+```
+
+# 📌 3: CALCULADORA DE ÁREA DE PINTURA - Usando operadores
+
+| ID | 1º Prompt | 2º Prompt | Resultado que o Aluno Deve Preencher |
+| :--- | :--- | :--- | :--- |
+| **01** | Largura da parede: 5,00 | Altura da parede: 3,00 | Resultado: __________________________________ |
+| **02** | Largura da parede: 2,40 | Altura da parede: 2,50 | Resultado: __________________________________ |
+| **03** | Largura da parede: 10,00 | Altura da parede: 2,75 | Resultado: __________________________________ |
+| **04** | Largura da parede: 1,50 | Altura da parede: 2,00 | Resultado: __________________________________ |
+| **05** | Largura da parede: 4,25 | Altura da parede: 3,10 | Resultado: __________________________________ |
+| **06** | Largura da parede: 8,00 | Altura da parede: 2,60 | Resultado: __________________________________ |
+| **07** | Largura da parede: 1,20 | Altura da parede: 2,30 | Resultado: __________________________________ |
+| **08** | Largura da parede: 6,50 | Altura da parede: 4,00 | Resultado: __________________________________ |
+| **09** | Largura da parede: 3,00 | Altura da parede: 2,50 | Resultado: __________________________________ |
+| **10** | Largura da parede: 3,50 | Altura da parede: 2,80 | Resultado: __________________________________ |
+
+```python
+largura_virgula = input("Digite a largura da parede (metros): ")
+largura = float(largura_virgula.replace(',' , '.'))
+
+altura_virgula = input("Digite a altura da parede (metros): ")
+altura = float(altura_virgula.replace(',' , '.'))
+
+area = largura * altura
+# O asterisco (*) multiplica a largura pela altura e guarda o resultado na variável área
+
+litros_tinta = area / 2
+
+resultado = f"{litros_tinta:.2f}".replace('.',',')
+area_final = f"{area:.2f}".replace('.',',')
+
+print(f"Sua parede tem {area_final} m².")
+print(f"Você precisará de aproximadamente {resultado} litros de tinta.")
 ```
