@@ -97,3 +97,49 @@ area_final = f"{area:.2f}".replace('.',',')
 print(f"Sua parede tem {area_final} m².")
 print(f"Você precisará de aproximadamente {resultado} litros de tinta.")
 ```
+
+# 📌 4: O "Calculador de Viagem" (Tempo e Combustível)
+
+
+
+| ID | 1º Prompt | 2º Prompt | 3º Prompt | 4º Prompt | Resultado que o Aluno Deve Preencher |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **01** | Distância: 340,50 | Velocidade: 70,00 | Consumo: 11 | Valor do litro: 7,15 | Resultado: __________________________________ |
+| **02** | Distância: 95,30 | Velocidade: 55,00 | Consumo: 9 | Valor do litro: 8,20 | Resultado: __________________________________ |
+| **03** | Distância: 1450,85 | Velocidade: 90,00 | Consumo: 13,5 | Valor do litro: 6,98 | Resultado: __________________________________ |
+| **04** | Distância: 520,00 | Velocidade: 75,50 | Consumo: 10 | Valor do litro: 7,85 | Resultado: __________________________________ |
+| **05** | Distância: 75,25 | Velocidade: 45,00 | Consumo: 15 | Valor do litro: 8,10 | Resultado: __________________________________ |
+| **06** | Distância: 2100,50 | Velocidade: 95,25 | Consumo: 8 | Valor do litro: 7,42 | Resultado: __________________________________ |
+| **07** | Distância: 180,40 | Velocidade: 65,00 | Consumo: 12,0 | Valor do litro: 6,98 | Resultado: __________________________________ |
+| **08** | Distância: 630,00 | Velocidade: 80,25 | Consumo: 10,5 | Valor do litro: 7,99 | Resultado: __________________________________ |
+| **09** | Distância: 45,50 | Velocidade: 40,00 | Consumo: 7 | Valor do litro: 8,05 | Resultado: __________________________________ |
+| **10** | Distância: 890,75 | Velocidade: 85,50 | Consumo: 14 | Valor do litro: 7,63 | Resultado: __________________________________ |
+
+```python
+distancia_inicial = input("Qual a distância da viagem em km? ")
+distancia = float(distancia_inicial.replace(',', '.'))
+
+velocidade_inicial = input("Qual será a velocidade média (km/h)? ")
+velocidade = float(velocidade_inicial.replace(',', '.'))
+
+consumo_inicial = input("Quantos quilômetos seu carro faz com 1 litro de combustível? ")
+consumo = float(consumo_inicial.replace(',', '.'))
+
+valor_inicial = input("Qual o valor do litro de combustível que será utilizado? ")
+valor = float(valor_inicial.replace(',', '.'))
+
+tempo_viagem = distancia / velocidade
+litros_necessarios = distancia / consumo
+valor_necessario = valor * litros_necessarios
+
+tempo_arredondado = round(tempo_viagem, 2)
+
+horas_inteiras = int(tempo_arredondado)
+
+litros_final = f"{litros_necessarios:.1f}".replace('.', ',')
+valor_consumo = f"{valor_necessario:.2f}".replace('.', ',')
+
+print(f"Você vai precisar de aproximadamente {litros_final} litros e gastará R$ {valor_consumo}.")
+print(f"Sua viagem vai durar aproximadamente {horas_inteiras} horas e {minutos} minutos.")
+```
+
